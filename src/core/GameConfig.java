@@ -1,7 +1,7 @@
 /***
  * Configurations for the game
  * 
- * Project: Java Core v1.0
+ * Project: Java Core v1.1
  * Author: Glenn latomme
  */
 package core;
@@ -10,7 +10,8 @@ public class GameConfig {
 	private static String _title = "No name set";
 	private static int _width = 800;
 	private static int _height = 600;
-	private static int _fps = 50;
+	private static int _fpsPaint = 50;
+	private static int _fpsTick = 50;
 	/**
 	 * @return the Title
 	 */
@@ -50,15 +51,26 @@ public class GameConfig {
 	/**
 	 * @return the frames per second that has been setted on creation
 	 */
-	public static int get_fps() {
-		return _fps;
+	public static int get_fpsPaint() {
+		return _fpsPaint;
 	}
 	/**
-	 * @param set the frames per second the tick and paint will try to run to
+	 * @param set the frames per second the paint will try to run to
 	 */
-	public static void set_fps(int _fps) {
-		GameConfig._fps = _fps;
+	public static void set_fpsPaint(int _fps) {
+		GameConfig._fpsPaint = _fps;
 	}
 	
-	
+	/**
+	 * @return the frames per second that has been setted on creation
+	 */
+	public static int get_fpsTick() {
+		return _fpsTick;
+	}
+	/**
+	 * @param set the frames per second the tick will try to run to
+	 */
+	public static void set_fpsTick(int _fps) {
+		GameConfig._fpsTick = _fps;
+	}
 }
